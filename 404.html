@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+    <!--
+      Content Security Policy (production build).
+      - script-src 'self': all JS ships as external files after `vite build`; no eval/unsafe-inline.
+      - style-src 'unsafe-inline' is required for React inline style attributes (carousel transforms).
+      - If you enable the cross-origin email endpoint, extend connect-src with its host.
+      Note: the local dev server (npm run dev) injects an inline React-refresh preamble;
+      the CSP above targets the deployed build, which is what customers see.
+    -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none';"
+    />
+
+    <title>Ты в деле — барбершоп в Одинцово | Стрижка, борода, запись онлайн</title>
+    <meta
+      name="description"
+      content="Барбершоп «Ты в деле» в Одинцово: мужская стрижка, моделирование бороды, классическое бритьё. Выбери стрижку по кодовому слову и записывайся в пару кликов."
+    />
+    <meta name="theme-color" content="#070707" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Ты в деле — барбершоп в Одинцово" />
+    <meta
+      property="og:description"
+      content="Выбери стрижку по кодовому слову и запишись онлайн. Одинцово, Каштановая ул., 7."
+    />
+    <meta property="og:locale" content="ru_RU" />
+
+    <!-- Structured data: BarberShop (external file so it stays CSP-compliant). -->
+    <link rel="alternate" type="application/ld+json" href="/ty-v-dele-barbershop/schema.json" />
+
+    <link rel="icon" href="/ty-v-dele-barbershop/favicon.svg" type="image/svg+xml" />
+    <script type="module" crossorigin src="/ty-v-dele-barbershop/assets/index-DbIFzBaU.js"></script>
+    <link rel="stylesheet" crossorigin href="/ty-v-dele-barbershop/assets/index-BmANlHgx.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
